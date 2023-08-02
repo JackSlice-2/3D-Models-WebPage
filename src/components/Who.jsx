@@ -3,6 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import React from 'react'
 import { styled } from 'styled-components'
 import { AmbientLight, BoxGeometry } from 'three';
+import Box from './Box';
 
 const Section = styled.div`
 height: 100vh;
@@ -64,23 +65,7 @@ const Who = () => {
     <Section>
             <Container>
                 <Left>
-                  <Canvas>
-                    <OrbitControls enableZoom={false} autoRotate={true}/>
-                    <ambientLight intensity={1} />
-                    <directionalLight position={[3, 2, 1]} />
-                    <mesh>
-                      <boxGeometry args={[2, 2, 2]} />
-                      <meshStandardMaterial color={"darkblue"}/>
-                      <RenderTexture attach="map">
-                        <PerspectiveCamera
-                        makeDefault
-                        position={[0,0,2]} 
-                        />
-                        </RenderTexture>
-                        <color attach="background" args={["blue"]} />
-                        <Text fontSize={0.6} color="white" position={[0, 0, 1]}>AfroTech</Text>
-                        </mesh>
-                  </Canvas>
+                  <Box />
                 </Left>
                 <Right>
                 <Title>Think. Make. Solve</Title>
