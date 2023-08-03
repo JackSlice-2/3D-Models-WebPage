@@ -11,11 +11,11 @@ const geoUrl =
   "https://gist.githubusercontent.com/ruliana/1ccaaab05ea113b0dff3b22be3b4d637/raw/196c0332d38cb935cfca227d28f7cecfa70b412e/br-states.json";
 
 const markers = [
-    { markerOffset: 25, name: "Brasilia", coordinates: [-47.8825, -15.7942] },
-    { markerOffset: 25, name: "Porto Alegre", coordinates: [-51.2177, -30.0346] },
-    { markerOffset: 25, name: "Florianopolis", coordinates: [-48.5482, -27.5945] },
-    { markerOffset: 25, name: "Sao Paulo", coordinates: [-46.6333, -23.5505] },
-    { markerOffset: 25, name: "Curitiba", coordinates: [-49.2827, -25.4284] }
+    { markerOffset: 25, coordinates: [-47.8825, -15.7942] },
+    { markerOffset: 25, coordinates: [-51.2177, -30.0346] },
+    { markerOffset: 25, coordinates: [-48.5482, -27.5945] },
+    { markerOffset: 25, coordinates: [-46.6333, -23.5505] },
+    { markerOffset: 25, coordinates: [-49.2827, -25.4284] }
 ];
   
 const Map = () => {
@@ -54,8 +54,8 @@ const Map = () => {
       ))}
       <Annotation
         subject={[-51.2177, -30.0346]}
-        dx={-90}
-        dy={90}
+        dx={-175}
+        dy={-165}
         connectorProps={{
             stroke: "white",
             strokeWidth: 2,
@@ -68,8 +68,8 @@ const Map = () => {
       </Annotation>
       <Annotation
         subject={[-48.5482, -27.5945]}
-        dx={-190}
-        dy={90}
+        dx={-215}
+        dy={-149}
         connectorProps={{
             stroke: "white",
             strokeWidth: 2,
@@ -78,6 +78,48 @@ const Map = () => {
       >
         <text x='-8' textAnchor="end" alignmentBaseline="middle" fill="white">
             {"Florianopolis"}
+        </text>
+      </Annotation>
+      <Annotation
+        subject={[-49.2827, -25.4284]}
+        dx={-227}
+        dy={-135}
+        connectorProps={{
+            stroke: "white",
+            strokeWidth: 2,
+            strokeLinecap: 'round'
+        }}
+      >
+        <text x='-8' textAnchor="end" alignmentBaseline="middle" fill="white">
+            {"Curitiba"}
+        </text>
+      </Annotation>
+      <Annotation
+        subject={[-46.6333, -23.5505]}
+        dx={-260}
+        dy={-130}
+        connectorProps={{
+            stroke: "white",
+            strokeWidth: 2,
+            strokeLinecap: 'round'
+        }}
+      >
+        <text x='-8' textAnchor="end" alignmentBaseline="middle" fill="white">
+            {"Sao Paulo"}
+        </text>
+      </Annotation>
+      <Annotation
+        subject={[-47.8825, -15.7942]}
+        dx={-260}
+        dy={-20}
+        connectorProps={{
+            stroke: "white",
+            strokeWidth: 2,
+            strokeLinecap: 'round'
+        }}
+      >
+        <text x='-8' textAnchor="end" alignmentBaseline="middle" fill="white">
+            {"Brasilia"}
         </text>
       </Annotation>
     </ComposableMap>
