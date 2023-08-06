@@ -1,13 +1,10 @@
 import React, { useState } from 'react'
 import { styled } from 'styled-components'
-import { ReactModel } from '../../public/React';
-import LinuxPC from './LinuxPC';
-import Object from './3DObject';
 
 const data = [
     "ReactJs",
-    "Linux",
-    "TailwindCss",
+    "LinuxOS",
+    "Django",
     "TypeScript",
     "Supabase"
 ];
@@ -77,13 +74,14 @@ const Works = () => {
             <Left>
                 <List>
                 {data.map((item) => (
-                    <ListItem key={item} text={item} onClick={()=>setWork(item)}>
+                    <ListItem key={item} text={item} onClick={()=>setWork(item)} >
                         {item}
                     </ListItem>
                 ))}
                 </List>
             </Left>
             <Right>
+                {work === "React" ? (<p>3</p>) : work === "Linux" ? (<p>2</p>) : <p>1</p>}
              </Right>
         </Container>
     </Section>

@@ -49,7 +49,7 @@ background-color: lightgray;
 `;
 
 const Button = styled.button`
-background-color: pink;
+background-color: darkblue;
 color: white;
 font-weight: bold;
 padding: 20px;
@@ -85,6 +85,7 @@ const handleSubmit =e=>{
       <Container>
         <Left>
           <Form ref={ref} onSubmit={handleSubmit}>
+            <Title>Stationed in Brazil But We Offer Services Worldwide !</Title>
             <Title>Contact Us</Title>
             <Input placeholder='name' name="name" />
             <Input placeholder='email' name="email" />

@@ -2,7 +2,6 @@ import React from 'react';
 import { OrbitControls, PerspectiveCamera, RenderTexture, Text } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { styled } from 'styled-components';
-import { SphereGeometry } from 'three';
 
 const Container = styled.div`
   height: 100vh;

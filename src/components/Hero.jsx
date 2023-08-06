@@ -1,10 +1,7 @@
 import React from 'react'
 import { styled } from 'styled-components'
 import Navbar from './Navbar';
-import Sphere from './Sphere';
-import { OrbitControls } from '@react-three/drei';
-import { SphereGeometry } from 'three';
-import { Canvas } from '@react-three/fiber';
+import Sphere from './Models/Sphere';
 
 const Section = styled.div`
 height: 100vh;
@@ -49,11 +46,11 @@ font-size: 24px;
 color: lightgray;
 `;
 const Button = styled.button`
-background-color: #cc4141;
+background-color: darkblue;
 color: white;
 font-weight: 500;
-width: 100px;
-padding: 10px;
+width: 150px;
+padding: 5px;
 border: none;
 border-radius: 5px;
 cursor: pointer;
@@ -88,12 +85,12 @@ const Hero = () => {
         <Navbar />
             <Container>
                 <Left>
-                    <Title>Think. Make. Solve</Title>
+                    <Title>"Pacience is Key When Troubleshooting."</Title>
                     <WhatWeDo>
                         <Line src="./img/line.png" />
                         <Subtitle>What we do</Subtitle>
                     </WhatWeDo>
-                    <Desc> Lorem ipsum dolor sit amet consectetur adipisicing elit. </Desc>
+                    <Desc>We strive to create the simplest and most sofisticated software possible, for desktop, IOS & android.</Desc>
                     <Button>Learn More</Button>
                 </Left>
                 <Right>

@@ -37,7 +37,7 @@ cursor: pointer;
 const Button = styled.button`
 width: 100px;
 padding: 10px;
-background-color: pink;
+background-color: darkred;
 color: white;
 border: none;
 border-radius: 5px;
@@ -52,10 +52,11 @@ const Navbar = () => {
                 <Logo src="./img/logo.png" />
                 <List>
                     <ListItem>Home</ListItem>
-                    <ListItem>Home</ListItem>
-                    <ListItem>Home</ListItem>
-                    <ListItem>Home</ListItem>
-                    <ListItem>Home</ListItem>
+                    <ListItem>About</ListItem>
+                    <ListItem>Tutorials</ListItem>
+                    <ListItem>Projects</ListItem>
+                    <ListItem>Apps</ListItem>
+                    <ListItem>Games</ListItem>
                 </List>
             </Links>
             <Icons>
