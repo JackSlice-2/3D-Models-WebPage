@@ -1,6 +1,10 @@
 import React from 'react'
 import { styled } from 'styled-components'
 import Navbar from './Navbar';
+import Sphere from './Sphere';
+import { OrbitControls } from '@react-three/drei';
+import { SphereGeometry } from 'three';
+import { Canvas } from '@react-three/fiber';
 
 const Section = styled.div`
 height: 100vh;
@@ -93,7 +97,8 @@ const Hero = () => {
                     <Button>Learn More</Button>
                 </Left>
                 <Right>
-                    <Img src="./img/moon.png" />
+                   <Sphere />
+                    {/* <Img src="./img/moon.png" /> */}
                 </Right>
             </Container>
     </Section>

@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import React from 'react'
 import { styled } from 'styled-components'
 import { AmbientLight, BoxGeometry } from 'three';
-import Box from './Box';
+import Cube from './Cube';
 
 const Section = styled.div`
 height: 100vh;
@@ -65,7 +65,7 @@ const Who = () => {
     <Section>
             <Container>
                 <Left>
-                  <Box />
+                  <Cube />
                 </Left>
                 <Right>
                 <Title>Think. Make. Solve</Title>

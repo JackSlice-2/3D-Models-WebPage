@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { styled } from 'styled-components'
+import { ReactModel } from '../../public/React';
+import LinuxPC from './LinuxPC';
+import Object from './3DObject';
 
 const data = [
     "ReactJs",
-    "NextJs",
+    "Linux",
     "TailwindCss",
     "TypeScript",
     "Supabase"
@@ -67,17 +70,21 @@ flex: 1
 `;
 
 const Works = () => {
+    const [work, setWork] = useState("React")
   return (
     <Section>
         <Container>
             <Left>
                 <List>
                 {data.map((item) => (
-                    <ListItem key={item} text={item}>{item}</ListItem>
+                    <ListItem key={item} text={item} onClick={()=>setWork(item)}>
+                        {item}
+                    </ListItem>
                 ))}
                 </List>
             </Left>
-            <Right></Right>
+            <Right>
+             </Right>
         </Container>
     </Section>
   )

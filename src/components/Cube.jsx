@@ -8,21 +8,21 @@ height: 100vh;
 width: 100%;
 `;
 
-const Box = () => {
+const Cube = () => {
   return (
     <div>
         <Container>
-            <Canvas>
+            <Canvas camera={{ fov: 25, position: [5,5,5] }}>
                 <OrbitControls enableZoom={false} autoRotate={true}/>
                 <ambientLight intensity={1} />
                 <directionalLight position={[3, 2, 1]} />
                 <mesh>
-                    <boxGeometry args={[2, 2, 2]} />
+                    <boxGeometry/>
                     <meshStandardMaterial>
                     <RenderTexture attach="map">
                     <PerspectiveCamera
                     makeDefault
-                    position={[0,0,2]} 
+                    position={[0,0,3]}
                     />
                     <color attach="background" args={["darkblue"]} />
                     <Text fontSize={0.3} color="gray">AfroTech</Text>
@@ -35,4 +35,4 @@ const Box = () => {
   )
 }
 
-export default Box
+export default Cube
